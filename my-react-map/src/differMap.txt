@@ -1,0 +1,23 @@
+return (
+    <RMap
+      initialCenter={center}
+      zoom={16}
+      mapStyle="https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json"
+    >
+      <RNavigationControl position="top-left" visualizePitch={true} />
+      <RGradientMarker
+        longitude={positionX}
+        latitude={positionY}
+        icon={mountainIconFactory}
+      />
+      {/* //===========================  Ruta */}
+      <RSource id="thyez" type="geojson" data={variableGeoJSONMap} />
+      <RLayer
+        source="thyez"
+        id="thyez-fill"
+        type="fill"
+      />
+      {/* //======  */}
+
+    </RMap>
+  );
