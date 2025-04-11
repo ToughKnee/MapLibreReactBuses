@@ -68,7 +68,7 @@ function MapComponent({ positionXReactive, busPositions }) {
   return (
     <>
     {/* //===========================  Random markers simulating bus positions using websockets */}
-    <RMap initialCenter={center} initialZoom={14}>
+    <RMap initialCenter={center} initialZoom={14} mapStyle="https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json"> 
       {busPositions.map((bus, index) => (
         <RGradientMarker
           key={index} // Add a unique key for each marker
